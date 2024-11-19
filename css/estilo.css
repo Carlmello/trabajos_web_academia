@@ -777,7 +777,6 @@ textarea{
 }
 
 @media only screen and (max-width:500px){
-  body *{border:1px solid black;}
   /* ----- GENERAL ----- */
   .redes-sociales ul img{
     max-width:50px;
