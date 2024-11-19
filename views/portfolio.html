@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+
+    <!-- META ETIQUETAS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de portfolio</title>
+    <meta name="description" content="Pagina_web_presentada_por_el_alumno_como_final_de_modulo_html">
+    <meta name="keywords" content="html,css,trabajofinal,pagina_web,galeria">
+    <meta name="author" content="carmelo_omar_hernandez_cardona">
+    <meta name="robots" content="all">
+    <meta name="category" content="spanish,spain,programacion_web">
+    <meta name="generator" content="visual_studio_code">
+
+    <!-- LINKS -->
+    <link rel="icon" type="image/png" href="../favicon_logotipo.png">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <!-- Aquí he pegado el código de googlefonts para cargar el estilo de fuente que voy a utilizar para todo lo que no sea un título-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+  
+  </head>
+
+  <body>
+    
+    <header>
+      
+      <nav> 
+
+        <div class="head">
+          <h1 class="font1">Portfolio</h1>
+          
+          <!-- SEGUNDO ELEMENTO PARA MENÚ HAMBURGUESA: el label -->
+          <label for="menu" class="menu-img"><img src="../assets/images/menu-dots-circle-svgrepo-com.svg" alt="imagen para menu hamburguesa" width="70" height="70"></label>
+        </div>
+
+        <!-- PRIMER ELEMENTO PARA MENÚ HAMBURGUESA: el checkbox -->
+        <input type="checkbox" name="menu" id="menu" class="menu">
+          
+        <ul class="navlinks">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="#"><span class="current">Galería</span></a></li>
+          <li><a href="./presupuesto.html">Presupuestos</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+        
+      </nav>
+    
+    </header>
+
+    <main class="main-views">
+
+      <section class="hero">
+        
+        <div class="bienvenida">
+
+          <img src="../assets/images/fondoheader.png" class="imgbienvenidaportfolio" alt="imagen_de_bienvenida" width="500" height="300">
+
+          <h2>Te doy la bienvenida a mi galería</h2>
+
+        </div>
+
+        <div class="arrows">
+          
+          <a href="#">
+            <img src="../assets/images/arrow-up-svgrepo-com.svg" alt="Flecha hacia arriba" width="40" height="40">
+          </a>
+          
+          <a href="#footer">
+            <img src="../assets/images/arrow-down-svgrepo-com.svg" alt="Flecha hacia abajo" width="40" height="40">
+          </a>
+        
+        </div>
+
+      </section>
+
+      <section class="sectiongaleria">
+
+        <h3>Aquí encontrarás mis trabajos hasta la fecha</h3>
+        
+        <p>Elige el que más se adapte a tu gusto, y hablaremos de precios</p>
+        
+        <div class="galeria">
+
+          <a href="#">
+            <img src="../assets/images/brocha.jpg" alt="lamina_de_" width="200" height="200">
+            <h4>La brocha de marta</h4>
+          </a>
+
+          <a href="#">
+            <img src="../assets/images/cisne-negro.jpg" alt="lamina_de_" width="200" height="200">
+            <h4>Cisne negro</h4>
+          </a>
+
+          <a href="#">
+            <img src="../assets/images/cisne-rojo.jpg" alt="lamina_de_" width="200" height="200">
+            <h4>Cisne rojo</h4>
+          </a>
+
+          <a href="#">
+            <img src="../assets/images/kiddos.jpg" alt="lamina_de_" width="200" height="200">
+            <h4>Bicicleta</h4>
+          </a>
+
+          <a href="#">
+            <img src="../assets/images/osohormiguero.jpg" alt="lamina_de_" width="200" height="200">
+            <h4>Osos hormigueros</h4>
+          </a>
+
+          <a href="#">
+            <img src="../assets/images/pajarracos1.jpg" alt="lamina_de_" width="200" height="200">
+            <h4>Dos pajarillos marrones</h4>
+          </a>
+
+          <a href="#">
+            <img src="../assets/images/pajarracos2.jpg" alt="lamina_de_" width="200" height="200">
+            <h4>Tres pajarillos marrones</h4>
+          </a>
+
+          <a href="#">
+              <img src="../assets/images/pajarracos3.jpg" alt="lamina_de_" width="200" height="200">
+              <h4>Dos cacatúas oscuras</h4>
+          </a>
+
+          <a href="#">
+            <img src="../assets/images/pajarracos4.jpg" alt="lamina_de_" width="200" height="200">
+            <h4>Pajarillos verdes</h4>
+          </a>
+
+          <a href="#">
+            <img src="../assets/images/pajarracosolitario.jpg" alt="lamina_de_" width="200" height="200">
+            <h4>Cacatúa premium</h4>
+          </a>
+
+          <a href="#">
+            <img src="../assets/images//woman.jpg" alt="lamina_de_" width="200" height="200">
+            <h4>Mujer de espaldas</h4>
+          </a>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer id="footer"> <!-- Le doy un id para enlazarlo a la flechita de desplazamiento directo hacia abajo -->
+
+      <div class="redes-sociales">
+        
+        <h4>¡Sígueme en mis redes sociales!</h4>
+        
+        <ul>
+          
+          <li>
+            <a href="https://www.instagram.com/" title="enlace_a_instagram">
+              <img src="../assets/images/social-media/instagram-svgrepo-com.svg" alt="icono_con_enlace_a_instagram" width="30" height="30">
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://x.com/" title="enlace_a_twitter">
+              <img src="../assets/images/social-media/twitter-round-svgrepo-com.svg" alt="icono_con_enlace_a_twitter-x" width="30" height="30">
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.etsy.com/es/" title="enlace_a_etsy">
+              <img src="../assets/images/social-media/etsy-logo-svgrepo-com.svg" alt="icono_con_enlace_a_etsy" width="30" height="30">
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://es-es.facebook.com/" title="enlace_a_facebook">
+              <img src="../assets/images/social-media/facebook-svgrepo-com.svg" alt="icono_con_enlace_a_facebook" width="30" height="30">
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://web.whatsapp.com/" title="enlace_a_whatsapp">
+              <img src="../assets/images/social-media/whatsapp-svgrepo-com.svg" alt="icono_con_enlace_a_whatsapp" width="30" height="30">
+            </a>
+          
+          </li>
+        
+        </ul>
+      
+      </div>
+
+      <p>&copy; Todos los derechos reservados</p>
+
+      <div class="politica">
+        
+        <a href="../assets/archives/documento1.pdf" title="enlace_a_politica_de_privacidad">
+          Política de privacidad
+        </a>
+        
+        <a href="../assets/archives/documento2.pdf" title="enlace_a_aviso_legal">
+          Aviso Legal
+        </a>
+        
+        <a href="contacto.html" title="enlace_a_direccion_de_la_empresa">
+          La empresa
+        </a>
+      
+      </div>
+
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,853 @@
+:root {
+  --myred:        #a00909;
+  --mygreen:      #025a07;
+  --myblue:       #1d49c1;
+  --myyellow:     #d0ca0d;
+  --myblack:      #000;
+  --mywhite:      #ffffff;
+  --mygrey:       #c9cece;
+  --mypink:       #b9359a;
+  --primario:     #388be4;
+  --secundario:   #0d7484;
+  --terciario:    #bb359a;
+  --cuaternario:  #ebe9ac;}
+html  {
+  font-size:        10px;}
+*     { 
+  margin:           0;   
+  padding:          0;
+  box-sizing:       border-box;
+  scroll-behavior:  smooth;}
+/* RESET Y VARIABLES */
+
+
+/* ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- ----- ----- FUENTES ----- ----- */
+
+@font-face{
+  font-family:            holenvintage;
+  src:                    url(../assets/fonts/holen_vintage.otf);
+}
+
+.font1{
+  font-family:            holenvintage,  serif;
+  letter-spacing:         0.3rem;
+}
+
+.font2{
+  font-family:            "Nunito",  sans-serif;
+  /*font-optical-sizing:    auto;  ESTO ES COPIADO DE GOOGLE FONTS Y ESTA LINEA ME DABA PROBLEMAS DE VALIDACION */
+  font-weight:            400; /* ESTO ES COPIADO DE GOOGLE FONTS */
+  font-style:             normal; /* ESTO ES COPIADO DE GOOGLE FONTS */
+}
+
+/* DOY MÁS TAMAÑO AL H1 PORQUE, PROBANDO LAS FUENTES, ME HA DADO LA SENSACIÓN DE QUE EL TAMAÑO DEL H1 Y EL H2 SON PRÁCTICAMENTE EL MISMO */
+
+h1{
+  font-size:              2.5em;
+}
+
+/* ----- ----- FIN DEFINICIÓN FUENTES ----- ----- */
+
+/* ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- ----- ----- BODY ----- ----- */
+
+body{
+  font-size:              clamp(1.8rem, 3vw, 2.5rem); 
+  font-family:            nunito, sans-serif, monospace;
+  display:                grid;
+  grid-template-rows:     4rem  1fr  25rem;
+  background:             url('../assets/images/paper-texture.jpg') top/cover no-repeat fixed;
+  cursor:                 url('../assets/images/paw-svgrepo-com.svg'), auto;
+  max-width:              100vw;                        
+}
+
+/* ----- ESTILOS BARRAS DESPLAZAMIENTO ----- */
+body::-webkit-scrollbar{
+  width:                  15px;
+}
+
+body::-webkit-scrollbar-track{
+  background:             linear-gradient(to bottom, var(--terciario), var(--cuaternario), var(--primario));
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color:       #0d748479;
+  border-radius:          10px;
+}
+/* ----- ESTILOS BARRAS DESPLAZAMIENTO ----- */
+
+
+/* ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- ----- ----- HEADER ----- ----- */
+
+nav{
+  display:                flex;
+  flex-direction:         column;
+}
+
+.head{
+  display:                grid;
+  grid-template-columns:  85%  15%;
+  justify-content:        space-between;
+  align-items:            center;
+  padding:                2rem  2rem;
+  z-index:                10;
+  background-color:       #38b3e4;
+}
+
+.head h1{
+  font-weight:            lighter;
+  color:                  var(--cuaternario);
+  line-height:            5rem;
+  text-shadow:            5px  5px  10px  #da9ecbd6;
+}
+
+.menu-img{
+  padding-top:            3px;
+  transition:             all  .5s  ease-in-out;
+  width:                  70px;
+  height:                 70px;
+  border-radius:          50%;
+}
+
+.menu-img:hover{
+  cursor:                 pointer;
+  transform:              translateX(5px);
+  box-shadow:             -2px  6px  2px  rgba(0, 0, 0, 0.411);
+} 
+
+.navlinks{
+  display:                flex;
+  flex-direction:         column;
+  align-items:            end;
+  gap:                    1rem;
+  padding-right:          30px;
+  list-style-type:        none;
+  background:             #0d7484b9;
+  transform:              translateY(-300px); /* PARA COMPORTAMIENTO MENÚ HAMBURGUESA */
+  transition:             all  .8s  ease-in-out;  /* PARA COMPORTAMIENTO MENÚ HAMBURGUESA */
+  z-index:                9; /* PARA COMPORTAMIENTO MENÚ HAMBURGUESA */
+}
+
+.menu:checked + .navlinks{ /* COMPORTAMIENTO MENÚ HAMBURGUESA */
+  transform:              translateY(0px);
+}
+
+.navlinks a{
+  text-decoration:        none;
+  color:                  rgb(255, 255, 255);
+  font-weight:            900;
+  letter-spacing:         0.2rem;
+  transition:             all  .3s  ease-in-out;
+  width:                  100%;
+}
+
+.navlinks a:hover{
+  color:                  #d380be;
+}
+
+.current{
+  color:                  var(--cuaternario);
+}
+
+#menu{
+  display:                none;  /* PARA COMPORTAMIENTO MENÚ HAMBURGUESA, OCULTAMOS EL CHECKBOX */
+}
+
+/* ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- ----- ----- MAIN ----- ----- */
+
+main{
+  min-height:             100vh;
+}
+
+.main-index{
+  margin-top:             6.4rem;
+  display:                grid;
+  grid-template-rows:     1fr  2fr  1.7fr;
+  min-height:             100vh;
+  max-width:              100vw;
+}
+
+.main-index section{
+  min-height:             100vh;
+}
+
+.main-index section h2{
+  text-align:             center;
+  padding:                5rem  0rem  3rem  0rem;
+  letter-spacing:         1.2rem;
+  font-weight:            bolder;
+  font-size:              4rem;
+  line-height:            5rem;
+}
+
+.main-index section h3{
+  padding:                2rem  0;
+}
+
+/* ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- ----- ----- HERO ----- ----- */
+
+.hero{
+  background:             #da9ecb7f;
+  display:                flex;
+  flex-direction:         column;
+  align-items:            center;
+}
+
+.hero h2{
+  color:                  var(--primario);
+}
+
+.logotipo{
+  height:                 450px;          /* CAMBIAR A MEDIDAS RESPONSIVE */
+  width:                  600px;          /* CAMBIAR A MEDIDAS RESPONSIVE */
+}
+
+.cajaintro{
+  padding:                0rem  4rem  2rem  3rem;
+}
+
+.cajaintro h3, p{
+  text-align:             center;
+}
+
+.arrows{
+  display:                flex;
+  flex-direction:         column;
+  justify-content:        space-around;
+  align-items:            center;
+  position:               fixed;
+  bottom:                 30px;
+  right:                  -5px;
+  width:                  5.5rem;
+  height:                 8rem;
+}
+
+
+/* ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- ----- ----- DESTACADOS ----- ----- */
+
+.destacados{
+  background:             #24a9d674;
+  display:                flex;
+  flex-direction:         column;
+  align-items:            center;
+  width:                  100%;
+  height:                 100%;
+  margin-bottom:          50px;
+}
+
+.destacados h2{
+  color:                  var(--terciario);
+}
+
+.productos{
+  display:                flex;
+  flex-direction:         column;
+  align-items:            center;
+  gap:                    70px;
+}
+
+.productos div{
+  border:                 8px  solid  #ce46ac85;
+  border-radius:          30px;
+  background-color:       rgba(156, 71, 14, 0.597);
+  transition:             all  .3s  ease-in-out;
+  opacity:                90%;
+}
+
+.productos div:hover{
+  transform:              translateY(-20px);
+  box-shadow:             0px  20px  10px  5px  rgba(0,  0,  0,  0.2);
+  opacity:                100%;
+}  
+
+.productos div img{
+  border-radius:          20px;
+  /* ADAPTAR EL TAMAÑO DE LAS IMAGENES CON PORCENTAJES, U OTRAS MEDIDAS RESPONSIVE*/
+}
+
+.productos div a{
+  color:                  black;
+  text-decoration:        none;
+  text-align:             center;
+}
+
+/* ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- ----- ----- VALORES ----- ----- */
+
+.valores{
+  background:             #ebe9ac75;
+}
+
+.valores h2{
+  color:                  var(--secundario);
+}
+
+.cajavalores{
+  display:                flex;
+  flex-direction:         column;
+  align-items:            center;
+  gap:                    70px;
+}
+
+.cajavalores div{
+  display:                flex;
+  flex-direction:         column;
+  align-items:            center;
+}
+
+.cajavalores p{
+  padding:                0px  5vw  0px  5vw;
+}
+
+.valorimg{
+  width:                  275px;
+  height:                 275px;
+}
+
+/* ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- ----- ----- FOOTER ----- ----- */
+
+footer{
+  display:              grid;
+  grid-template-rows:   2fr  1fr  .5fr;
+  background:           #0f535eaf;
+  color:                white;
+}
+
+.redes-sociales{      
+  display:              flex;
+  flex-direction:       column;
+  flex-wrap:            wrap;
+  justify-content:      space-evenly;
+  align-items:          center;
+}
+
+.redes-sociales h4{
+  padding-left:         10px;
+}
+
+.redes-sociales ul{     
+  display:              flex;
+  flex-direction:       row;
+  gap:                  5vw;
+  list-style-type:      none;
+}
+
+.redes-sociales ul img{
+  width:                60px;
+  height:               60px;
+  opacity:              85%;
+  transition:           all  .3s  ease-in-out;
+}
+
+.redes-sociales ul img:hover{
+  width:                65px;
+  height:               65px;
+  opacity:              100%;
+}
+
+footer p{
+  letter-spacing:       5px;
+}
+
+.politica{
+  display:              flex;
+  justify-content:      space-around;
+}
+
+.politica a{
+  color:                white;
+  text-decoration:      none;
+  transition:           all  .3s  ease-in-out;
+}
+
+.politica a:hover{
+  color:                var(--terciario);
+  font-weight:          bold;
+}
+
+
+/* ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- PÁGINA PORTFOLIO ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----  */
+
+/*    -----     -----     MAIN    -----     -----     */
+
+
+.main-views{
+  background-color:       #ebe9ac68;
+}
+
+/*    -----     -----     HERO    -----     -----     */
+
+.hero .bienvenida{
+  display:                flex;
+  flex-direction:         column;
+  align-items:            center;
+  gap:                    20px;
+  padding-top:            60px;
+  padding-bottom:         20px;
+}
+
+.imgbienvenidaportfolio{
+  width:                  500px;
+  height:                 250px;
+  object-fit:             cover;
+}
+
+.hero .bienvenida h2{
+  color:                  var(--secundario);
+}
+
+/*    -----     -----     SECTIONGALERIA    -----     -----     */
+
+.sectiongaleria{
+  display:                flex;
+  flex-direction:         column;
+  justify-content:        space-around;
+  align-items:            center;
+  gap:                    50px;
+  padding-top:            30px;
+}
+
+.galeria{
+  display:                flex;
+  flex-direction:         row;
+  flex-wrap:              wrap;
+  justify-content:        space-around;
+  gap:                    90px  20px;
+  padding:                0  30px  80px  30px;
+}
+
+.galeria a{
+  border:                 5px  solid  var(--terciario);
+  border-radius:          20px;
+  width:                  30vw;
+  height:                 30vw;
+  max-width:              200px;
+  max-height:             200px;
+  text-decoration:        none;
+  opacity:                80%;
+  transition:             all  .5s  ease-in-out;
+}
+
+.galeria a h4{
+  color:                  black;
+  text-align:             center;
+}
+
+.galeria a img{
+  width:                  100%;
+  height:                 100%;
+  border-radius:          15px;
+}
+
+.galeria a:hover{
+  opacity:                100%;
+  width:                  40vw;
+  height:                 40vw;
+}
+
+
+/* ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- PÁGINA PRESUPUESTO ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----  */
+
+
+.main-presupuesto .hero{
+  width:                  100%;
+  height:                 100%;
+  padding-top:            90px;     /* Tengo que darle padding superior porque, por algún motivo que no pude identificar, la primera grid-row del body, que es el header, me tapa el inicio de la segunda, que es el main. Tiene pinta de que ha habido algún elemento o elementos al que no le he dado un tamaño específico. Creo que esto es un error de planificación, el cual habría sido más fácil de identificar si hubiese trabajado desde el principio con un body *{border:1px solid black}. MUY a tener en cuenta en el futuro */
+  display:                grid;
+  grid-template-rows:     auto  1fr;
+  justify-items:          center;
+  margin-bottom:          50px;
+}
+
+.tit-main{
+  width:                  90%;
+  height:                 auto;
+  text-align:             center;
+}
+
+.formulario{
+  border:                 5px  solid  var(--cuaternario);
+  border-radius:          20px;
+  width:                  85%;
+  height:                 auto;
+  margin-top:             0px;
+  display:                flex;
+  flex-direction:         column;
+  padding:                2vw;
+  gap:                    20px;
+  text-align:             center;
+}
+
+.formulario ul{
+  list-style-type:        none;
+  padding:                10px  20px;
+  display:                flex;
+  flex-direction:         column;
+  gap:                    30px;
+}
+
+.form-in ul li input::placeholder{
+  color:                  var(--secundario);
+  font-family:            "Nunito",  sans-serif;
+}
+
+textarea::placeholder{
+  color:                  var(--secundario);
+  font-family:            "Nunito",  sans-serif;
+}
+
+.formulario ul li{
+  display:                flex;
+  flex-direction:         row;
+  justify-content:        space-between;
+  align-items:            center;
+  font-weight:            bold;
+}
+
+.formulario ul li *{
+  font-family:            nunito,  serif;
+  text-align:             center;
+}
+
+.formulario ul li input:focus{
+  background-color:       rgba(255, 255, 255, 0.662);
+}
+
+.formulario ul li textarea:focus{
+  background-color:       rgba(255, 255, 255, 0.662);
+}
+
+.formulario ul .politics{
+  display:                flex;
+  flex-direction:         row;
+  justify-content:        space-around;
+}
+
+.politics input{
+  width:                  30px;
+  height:                 30px;
+}
+
+.politics input:hover{
+  cursor:                 pointer;
+}
+
+.politics label{
+  color:                  var(--secundario);
+  font-weight:            bold;
+}
+
+.politics label:hover{
+  cursor:                 pointer;
+  color:                  var(--cuaternario);
+  transition:             all  .3s  ease-in-out;
+}
+
+.politics > div{
+  display:                flex;
+  flex-direction:         row;
+  flex-wrap:              nowrap;
+  gap:                    5vw;
+}
+
+.politics div a{
+  color:                  var(--secundario);
+  font-weight:            bold;
+  transition:             all  .5s  ease-in-out;
+}
+
+.politics div a:hover{
+  color:                  var(--cuaternario);
+  font-weight:            900;
+}
+
+
+.formulario .buttons{
+  display:                flex;
+  flex-direction:         row;
+  flex-wrap:              nowrap;
+  justify-content:        space-around;
+  align-items:            center;
+  padding:                20px;
+}
+
+.buttons input{
+  width:                  110px;
+  height:                 45px;
+  border:                 0;
+  border-radius:          20px;
+  letter-spacing:         6px;
+  box-shadow:             0px  0px  4px  rgba(0, 0, 0, 0.507);
+  transition:             all  .3s  ease-in-out;
+  background-color:       var(--secundario);
+  color:                  var(--cuaternario);
+  font-weight:            bold;
+}
+
+
+.buttons input:hover{   
+  cursor:                 pointer;
+  width:                  115px;
+  height:                 50px;
+  font-weight:            bold;
+  box-shadow:             0px  -2px  6px  rgba(0, 0, 0, 0.662);
+  color:                  var(--secundario);
+  background-color:       var(--cuaternario);
+}
+
+.formulario ul li input:not([type='checkbox']), textarea{
+  border-radius:          5px;
+  border-color:           white;
+  width:                  30vw;
+  height:                 30px;
+}
+
+textarea{
+  max-width:              40vw;
+  max-height:             20vw;
+  min-width:              20vw;
+  min-height:             10vw;
+}
+
+
+/* ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- PÁGINA CONTACTO ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----  */
+
+/*      MAIN-CONTACTO  class= .main-contacto    */
+
+.main-contacto{
+  max-width:              100vw;
+  height:                 auto;
+  display:                grid;
+  grid-template-rows:     20%  auto;
+  margin-top:             70px;
+}
+
+/*      SECTION CLASS= .hero      */
+.main-contacto .hero{
+  width:                  100%;
+  max-width:              100%;
+  height:                 auto;
+  display:                grid;
+  grid-template-rows:     auto;
+  justify-items:          center;
+}  
+
+
+/*      MAIN-CONTACTO CLASS= .contacto      */
+
+.main-contacto .contacto{
+  min-width:              90%;
+  max-width:              100%;
+  height:                 auto;
+  max-height:             80%;
+  display:                flex;
+  flex-direction:         column;
+  justify-content:        space-around;
+  align-items:            center;
+  margin-top:             15px;
+}
+
+.titcontacto{
+  text-align:             center;
+  display:                flex;
+  flex-direction:         column;
+  gap:                    5rem;
+  padding:                10px  20px;
+}
+
+.infocontacto{
+  border-radius:          15px;
+  background-color:       rgba(229, 229, 229, 0.689);
+  width:                  80%;
+  height:                 auto;
+  min-height:             21.5rem;
+  max-width:              800px;
+  overflow:               hidden;
+}
+
+.infocontacto ul{
+  padding:                10px;
+  list-style-type:        none;
+  width:                  100%;
+  height:                 auto;
+  display:                flex;
+  flex-direction:         column;
+  gap:                    20px;
+}
+
+.infocontacto ul li{
+  display:                flex;
+  flex-wrap:              nowrap;
+  justify-content:        space-between; 
+  align-items:            center;
+}
+
+.infocontacto ul li h4{
+  font-family:            holenvintage, serif, monospace;
+}
+
+.ubicacion{
+  width:                  90%;
+  height:                 60%;
+  display:                flex;
+  flex-wrap:              nowrap;
+  flex-direction:         column;
+  align-items:            center;
+  justify-content:        space-between;
+  gap:                    10px;
+  margin-bottom:          20%;
+  margin-top:             40px;
+}
+
+.ubicacion *{
+  width:                      75%;
+  height:                     45%;
+  border-top-right-radius:    45px;
+  border-bottom-left-radius:  45px;
+  border-top-left-radius:     10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+/* /-/-/--//-/-/-/-/-/-/ MEDIA QUERIES para ordenador (a partir de 1025px) -/-/--/-/-//-/-/--//--/-/*/
+
+@media only screen and (min-width:1025px){
+
+  /* ----- MODIFICAR EL HEADER Y SACAR EL MENÚ QUE OCULTA LA "HAMBURGUESA" ----- */
+  nav{
+    flex-direction:         column;
+  }
+
+  .head{
+    grid-template-columns:  100%;
+    justify-items:          center;
+  }
+
+  header nav .menu-img{   
+    display:                none;
+  }
+
+  .navlinks{
+    flex-direction:         row;
+    justify-content:        space-around;
+    justify-items:          center;
+    padding-right:          0;
+    transform:              translateY(0);
+    background-color:       #38b3e4;        
+    transition:             all  0s;  /* Para que el menú volviese a aparecer, pero de manera brusca */
+  }
+
+  /* --- INDEX PRODUCTOS DESTACADOS --- */
+
+  .destacados{
+    justify-content:        space-around;
+    margin-bottom:          0;
+  }
+  
+  .productos{
+    flex-direction:         row;
+    flex-wrap:              wrap;
+    justify-content:        center;
+    gap:                    90px;
+    margin:                 30px  40px  80px  40px;
+  }
+
+  /* ADAPTO EL TAMAÑO DE LA SECCIÓN "DESTACADOS" DEL INDEX*/
+  .main-index{
+    grid-template-rows:     1fr  auto  1.7fr;
+  }
+  
+  .main-index section{
+    min-height:             100vh;
+  }
+  
+  .cajavalores{
+    padding-bottom:         40px;
+  }
+  
+  /* PRESUPUESTO */
+  .tit-main{
+  padding-top:              70px;
+  }
+
+  /* CONTACTO */
+
+  .infocontacto{
+    margin:                 80px;
+  }
+
+}
+
+@media only screen and (max-width:500px){
+  body *{border:1px solid black;}
+  /* ----- GENERAL ----- */
+  .redes-sociales ul img{
+    max-width:50px;
+    max-height:50px;
+    opacity:100%;
+  }
+  .menu-img{
+    padding-right:10px;
+    box-shadow:none;
+  }
+  .menu-img:hover{
+    transform:none;
+    box-shadow:none;
+  }
+  .reduced{
+    font-size:3rem; /* EL H1 ERA MUY GRANDE Y SE SOLAPABA CON EL MENÚ HAMBURGUESA */
+  }
+  img{
+    opacity:100%;
+  }
+
+  /* ----- GENERAL ----- */
+
+  /* ----- INDEX ----- */
+  .logotipo{ /* PROBLEMAS EN PANTALLAS PEQUEÑAS POR TAMAÑO PREVIAMENTE DECLARADO EN PIXELES */
+    width:80%;
+    height:30%;
+  }
+  .main-index section h2{
+    font-size:3.5rem
+  }
+  .productos div{ /* PROBLEMAS EN PANTALLAS PEQUEÑAS POR TAMAÑO PREVIAMENTE DECLARADO EN PIXELES */
+    width:90%;
+    height:450px;
+  }
+  .productos div h3{
+    padding:0;
+  }
+  .productos img{ /* PROBLEMAS EN PANTALLAS PEQUEÑAS POR TAMAÑO PREVIAMENTE DECLARADO EN PIXELES */
+    width:100%;
+    height:90%;
+  }
+  .valores{
+    padding-bottom:4rem;
+  }
+  .valorimg{ /* PROBLEMAS EN PANTALLAS PEQUEÑAS POR TAMAÑO PREVIAMENTE DECLARADO EN PIXELES */
+    width:75%;
+    height:75%;
+  }
+  /* ----- INDEX ----- */
+
+  /* ----- PORTFOLIO ----- */
+  .imgbienvenidaportfolio{ /* PROBLEMAS EN PANTALLAS PEQUEÑAS POR TAMAÑO PREVIAMENTE DECLARADO EN PIXELES */
+    width:100%;
+  }
+  .main-views .bienvenida h2{
+    padding:0 20px;
+    text-align:center;
+  }
+  .sectiongaleria h3{
+    padding:0 20px;
+    text-align:center;
+  }
+  /* ----- PORTFOLIO ----- */
+}
+
+/* PROVISIONALES */
+
+/*body *{ (Me habría ayudado mucho si hubiese trabajado con estos bordes desde el principio)
+  border:1px solid black;
+}*/
+
+/* PROVISIONALES */

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+
+    <!-- META ETIQUETAS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de presupuestos</title>
+    <meta name="description" content="Pagina_web_presentada_por_el_alumno_como_final_de_modulo_html">
+    <meta name="keywords" content="html,css,trabajofinal,pagina_web,formulario,presupuesto">
+    <meta name="author" content="carmelo_omar_hernandez_cardona">
+    <meta name="robots" content="all">
+    <meta name="category" content="spanish,spain,programacion_web">
+    <meta name="generator" content="visual_studio_code">
+
+    <!-- LINKS -->
+    <link rel="icon" type="image/png" href="../favicon_logotipo.png?v=2">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <!-- Aquí he pegado el código de googlefonts para cargar el estilo de fuente que voy a utilizar para todo lo que no sea un título-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+  
+  </head>
+
+  <body>
+    
+    <header>
+      
+      <nav> 
+
+        <div class="head">
+          <h1 class="font1 reduced">Presupuesto</h1>
+
+          <!-- SEGUNDO ELEMENTO PARA MENÚ HAMBURGUESA: el label -->
+          <label for="menu" class="menu-img"><img src="../assets/images/menu-dots-circle-svgrepo-com.svg" alt="imagen para menu hamburguesa" width="70" height="70"></label>
+        </div>
+
+        <!-- PRIMER ELEMENTO PARA MENÚ HAMBURGUESA: el checkbox -->
+        <input type="checkbox" name="menu" id="menu" class="menu">
+          
+        <ul class="navlinks">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./portfolio.html">Galería</a></li>
+          <li><a href="#"><span class="current">Presupuestos</span></a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+        
+      </nav>
+    
+    </header>
+
+    <main class="main-presupuesto">
+
+      <section class="hero">
+
+        <div class="tit-main">
+          <h2>PRESUPUESTEMOS TU PROYECTO</h2>
+        </div>
+
+        <div class="formulario">
+                   
+          <h3>Rellena este formulario y me pondré a ello</h3>
+          
+          <div class="form-in">
+            
+            <form id="myForm" name="myForm" action="#" method="get" target="_self">
+            
+              <ul>
+  
+                <li>
+                  <label for="first-name">Nombre</label>
+                  <input type="text" id="first-name" name="first-name"
+                  placeholder="Nombre y apellidos" pattern="[A-Z a-z]{3,50}"
+                  title="Escriba solo letras entre 3 y 50 caracteres" autofocus required>
+                </li>
+  
+                <li>
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" 
+                  placeholder="Indica tu correo electrónico" pattern="[a-zA-Z0-9_-.]+@[a-zA-Z0-9_.]+\.[a-zA-Z]{2,4}"
+                  title="Escriba su correo electrónico" required>
+                </li>
+  
+                <li>
+                  <label for="telef">Teléfono</label>
+                  <input type="tel" id="telef" name="telef" 
+                  placeholder="Indica tu número de teléfono" pattern="[0-9]{9}"
+                  title="Escriba los 9 números de su teléfono móvil" required>
+                </li>
+  
+                <li>
+                  <label for="mensaje">Solicita más información</label>
+                  <textarea rows="6" id="mensaje" placeholder="Escribe aquí tu mensaje"></textarea>
+                </li>
+                
+                <li class="politics">
+                  
+                  <div>
+                    
+                    <input type="checkbox" id="aceptar" name="aceptar" required>
+                    
+                    <div>
+                      <span>He leído y</span>
+                      <label for="aceptar">&nbsp;acepto&nbsp;</label>
+                      <span>la&nbsp;</span>
+                      <a href="../assets/archives/documento1.pdf">Política de privacidad</a> 
+                    </div>
+                  
+                  </div>
+                
+                </li>
+              
+              </ul>
+              
+              <div class="buttons">
+                <input type="submit" value="ENVIAR">
+                <input type="reset" value="BORRAR">
+              </div>
+              
+            </form> 
+          
+          </div>
+
+        </div>
+
+        <div class="arrows"> <!-- En esta caja voy a poner, con posición fixed, unas flechitas para navegar directamente al inicio y al footer de cada .html -->
+          
+          <a href="#">
+            <img src="../assets/images/arrow-up-svgrepo-com.svg" alt="Flecha hacia arriba" width="40" height="40">
+          </a>
+          
+          <a href="#footer">
+            <img src="../assets/images/arrow-down-svgrepo-com.svg" alt="Flecha hacia abajo" width="40" height="40">
+          </a>
+        
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer id="footer"> <!-- Le doy un id para enlazarlo a la flechita de desplazamiento directo hacia abajo -->
+
+      <div class="redes-sociales">
+        
+        <h4>¡Sígueme en mis redes sociales!</h4>
+        
+        <ul>
+          
+          <li>
+            <a href="https://www.instagram.com/" title="enlace_a_instagram">
+              <img src="../assets/images/social-media/instagram-svgrepo-com.svg" alt="icono_con_enlace_a_instagram" width="30" height="30">
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://x.com/" title="enlace_a_twitter">
+              <img src="../assets/images/social-media/twitter-round-svgrepo-com.svg" alt="icono_con_enlace_a_twitter-x" width="30" height="30">
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.etsy.com/es/" title="enlace_a_etsy">
+              <img src="../assets/images/social-media/etsy-logo-svgrepo-com.svg" alt="icono_con_enlace_a_etsy" width="30" height="30">
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://es-es.facebook.com/" title="enlace_a_facebook">
+              <img src="../assets/images/social-media/facebook-svgrepo-com.svg" alt="icono_con_enlace_a_facebook" width="30" height="30">
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://web.whatsapp.com/" title="enlace_a_whatsapp">
+              <img src="../assets/images/social-media/whatsapp-svgrepo-com.svg" alt="icono_con_enlace_a_whatsapp" width="30" height="30">
+            </a>
+          </li>
+        
+        </ul>
+      
+      </div>
+
+      <p>&copy; Todos los derechos reservados</p>
+
+      <div class="politica">
+        
+        <a href="../assets/archives/documento1.pdf" title="enlace_a_politica_de_privacidad">
+          Política de privacidad
+        </a>
+        
+        <a href="../assets/archives/documento2.pdf" title="enlace_a_aviso_legal">
+          Aviso Legal
+        </a>
+        
+        <a href="contacto.html" title="enlace_a_direccion_de_la_empresa">
+          La empresa
+        </a>
+      
+      </div>
+
+    </footer>
+
+  </body>
+</html>

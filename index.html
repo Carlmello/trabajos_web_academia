@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+
+    <!-- META ETIQUETAS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo final html Carmelo Omar Hernández Cardona</title>
+    <meta name="description" content="Pagina_web_presentada_por_el_alumno_como_final_de_modulo_html">
+    <meta name="keywords" content="html,css,trabajofinal,pagina_web,index">
+    <meta name="author" content="carmelo_omar_hernandez_cardona">
+    <meta name="robots" content="all">
+    <meta name="category" content="spanish,spain,programacion_web">
+    <meta name="generator" content="visual_studio_code">
+
+    <!-- LINKS -->
+    <link rel="icon" type="image/png" href="favicon_logotipo.png?v=2">
+    <link rel="stylesheet" href="css/estilo.css">
+    <!-- Aquí he pegado el código de googlefonts para cargar el estilo de fuente que voy a utilizar para todo lo que no sea un título-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    
+    <header>
+      
+      <nav> 
+
+        <div class="head">
+
+          <h1 class="font1 reduced">EL GATO VIOLINISTA</h1>
+
+          <!-- SEGUNDO ELEMENTO PARA MENÚ HAMBURGUESA:el label -->
+          <label for="menu" class="menu-img"><img src="assets/images/menu-dots-circle-svgrepo-com.svg" alt="imagen para menu hamburguesa" width="70" height="70"></label>
+        
+        </div>
+
+        <!-- PRIMER ELEMENTO PARA MENÚ HAMBURGUESA :el checkbox-->
+        <input type="checkbox" name="menu" id="menu" class="menu">
+          
+        <ul class="navlinks">
+          
+          <li><a href="#"><span class="current">Inicio</span></a></li>
+          <li><a href="views/portfolio.html">Galería</a></li>
+          <li><a href="views/presupuesto.html">Presupuestos</a></li>
+          <li><a href="views/contacto.html">Contacto</a></li>
+        
+        </ul>
+        
+      </nav>
+    
+    </header>
+
+    <main class="main-index">
+
+      <section class="hero">
+
+        <h2>¡HOLA! ME PRESENTO</h2>
+
+        <img src="assets/images/logotipo.png" class="logotipo" alt="Logotiopo de la empresa" width="500" height="500">
+
+        <div class="cajaintro">
+
+          <h3>Te estarás preguntando qué hace un gato tocando el violín...</h3>
+          <p>Bien, pues siento decepcionarte pero este gato no está tocando el violín; está, de hecho, mirando una libélula. Sin embargo, sí que se le dan bastante decentemente las artes plásticas... Habrás venido a ver sus trabajos, ¿no es así? Perfecto.<br>En ese caso, te doy la bienvenida a la página web de ¡El Gato Violinista! Más abajo encontrarás mis láminas más destacadas, y mediante el enlace a la galería llegarás adonde escondo todo lo demás.</p>
+  
+        </div>
+
+        <div class="arrows">
+          
+          <a href="#">
+            <img src="assets/images/arrow-up-svgrepo-com.svg" alt="Flecha hacia arriba" width="40" height="40">
+          </a>
+          <a href="#footer">
+            <img src="assets/images/arrow-down-svgrepo-com.svg" alt="Flecha hacia abajo" width="40" height="40">
+          </a>
+        
+        </div>
+
+      </section>
+
+      <section class="destacados">
+
+        <h2 class="small">PRODUCTOS DESTACADOS</h2>
+
+        <div class="productos">
+          
+          <div>
+            <a href="views/portfolio.html">
+              <img src="assets/images/pajarracos1.jpg" alt="imagen_de_una_lamina" width="400" height="400">
+              <h3>Dos pajarillos marrones</h3>
+            </a>    
+          </div>
+          
+          <div>
+            <a href="views/portfolio.html">
+              <img src="assets/images/pajarracos2.jpg" alt="imagen_de_una_lamina" width="400" height="400">
+              <h3>Tres pajarillos marrones</h3>
+            </a>    
+          </div>
+          
+          <div>
+            <a href="views/portfolio.html">
+              <img src="assets/images/pajarracos3.jpg" alt="imagen_de_una_lamina" width="400" height="400">
+              <h3>Dos cacatúas oscuras</h3>
+            </a>    
+          </div>
+        
+        </div>
+
+      </section>
+
+      <section class="valores">
+
+        <h2 class="reduced">VALORES DE LA EMPRESA</h2>
+
+        <div class="cajavalores">
+          
+          <div>
+            <img src="assets/images/paws.png" alt="imagen_png_de_patas_de_gato" class="valorimg" width="300" height="400">
+            <h3>Pawcrafted</h3>
+            <p>Todo el arte que encontrarás aquí está hecho a pata, por un servidor</p>
+          </div>
+          
+          <div>
+            <img src="assets/images/eco.png" alt="imagen_png_de_simbolo_ecologia/" class="valorimg" width="300" height="400">
+            <h3>Empresa ecofriendly</h3>
+            <p>Nos comprometemos a que nuestro proceso artístico sea cien por cien ecológico, cuidando del reciclaje de todo el material empleado y minimizando la emisión de residuos hacia el medio ambiente</p>
+          </div>
+          
+          <div>
+            <img src="assets/images/vegan.png" alt="imagen_png_vegano" class="valorimg" width="300" height="400">
+            <h3>Materiales 100% veganos</h3>
+            <p>Cuidamos que todos los materiales empleados tengan origen vegano. No apoyamos el testeo con animales</p>
+          </div>
+        
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer id="footer"> <!-- Le doy un id para enlazarlo a la flechita de desplazamiento directo hacia abajo -->
+
+      <div class="redes-sociales">
+        
+        <h4>¡Sígueme en mis redes sociales!</h4>
+        
+        <ul>
+          
+          <li>
+            <a href="https://www.instagram.com/" title="enlace_a_instagram">
+              <img src="assets/images/social-media/instagram-svgrepo-com.svg" alt="icono_con_enlace_a_instagram" width="30" height="30">
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://x.com/" title="enlace_a_twitter">
+              <img src="assets/images/social-media/twitter-round-svgrepo-com.svg" alt="icono_con_enlace_a_twitter-x" width="30" height="30">
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.etsy.com/es/" title="enlace_a_etsy">
+              <img src="assets/images/social-media/etsy-logo-svgrepo-com.svg" alt="icono_con_enlace_a_etsy" width="30" height="30">
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://es-es.facebook.com/" title="enlace_a_facebook">
+              <img src="assets/images/social-media/facebook-svgrepo-com.svg" alt="icono_con_enlace_a_facebook" width="30" height="30">
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://web.whatsapp.com/" title="enlace_a_whatsapp">
+              <img src="assets/images/social-media/whatsapp-svgrepo-com.svg" alt="icono_con_enlace_a_whatsapp" width="30" height="30">
+            </a>
+          </li>
+        
+        </ul>
+      
+      </div>
+
+      <p>&copy; Todos los derechos reservados</p>
+
+      <div class="politica">
+        
+        <a href="assets/archives/documento1.pdf" title="enlace_a_politica_de_privacidad">
+          Política de privacidad
+        </a>
+        <a href="assets/archives/documento2.pdf" title="enlace_a_aviso_legal">
+          Aviso Legal
+        </a>
+        <a href="views/contacto.html" title="enlace_a_direccion_de_la_empresa">
+          La empresa
+        </a>
+      
+      </div>
+
+    </footer>
+
+  </body>
+</html>
